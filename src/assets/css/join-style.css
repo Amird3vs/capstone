@@ -1,0 +1,535 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.chismisign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.logo-cont {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.9em;
+}
+
+.logo {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.account-d {
+    display: flex;
+    flex-direction: row;
+}
+
+.email-prov {
+    margin-right: 15px;
+}
+
+.email,
+.provider {
+    font-size: 0.7em;
+}
+
+.provider {
+    text-align: right;
+}
+
+.profile-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    padding: 0px 100px 50px;
+    overflow: hidden;
+}
+
+.video-feed {
+    width: 50%;
+    height: 80%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.controls {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.feed-title {
+    align-self: flex-start;
+    margin-bottom: 15px;
+    color: #3C5448;
+}
+
+.Meeting-info {
+    width: 40%;
+    height: 70%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    width: 100%;
+    height: auto;
+}
+
+.join-title {
+    align-self: start;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    color: #3C5448;
+}
+
+.joinp {
+    font-size: 21px;
+}
+
+.fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    width: 70%;
+}
+
+.meeting-name,
+.joining-opt {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.meeting-name {
+    justify-content: flex-start;
+    margin-right: 10px;
+    width: 60%;
+    position: relative;
+}
+
+.joining-opt {
+    justify-content: flex-end;
+    margin-left: 10px;
+    width: 40%;
+}
+
+.dropdown,
+.meeting-name {
+    display: flex;
+    align-items: center;
+}
+
+.join-select,
+.meeting-input {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+}
+
+.animate-dropdown {
+    animation: pulse 0.2s ease-in-out 3 alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.join-label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.meeting-input,
+.join-select {
+    border: 1px solid #ccc;
+}
+
+.join-select:focus {
+    border: 1px solid var(--main-green-color);
+}
+
+.share-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+}
+
+.share {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #3C5448;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.share-link-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    background-color: rgba(185, 185, 185, 0.3);
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    padding-right: 40px;
+    color: #555;
+}
+
+.linkp {
+    color: #000;
+    font-size: 0.85em;
+}
+
+.linkp2 {
+    color: #888;
+    font-size: 0.80em;
+}
+
+.copy-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #3C5448;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.join-button,
+.present-button {
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 500;
+    font-family: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.present-icon {
+    margin-right: 10px;
+}
+
+.join-button {
+    background-color: #3C5448;
+    color: #fff;
+    padding: 10px 25px;
+}
+
+.join-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.present-button {
+    background-color: white;
+    color: #3C5448;
+    padding: 10px 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-left: 10px;
+}
+
+.material-button {
+    background-color: red;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.smaller-font {
+    margin: 0 10px;
+}
+
+.custom-material-icon {
+    font-size: 1.1rem;
+}
+
+.smaller-font.active {
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.device-selection-container {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.device-selection {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-devices {
+    margin-right: 5px;
+    font-size: 1.1rem;
+    color: #3C5448;
+}
+
+.device-dropdown {
+    width: 200px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #888;
+}
+
+@media only screen and (max-width: 1200px) {
+    .content-container {
+        padding: 0 20px 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .chismisign {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .account-d,
+    .device-selection-container {
+        display: none;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .video-feed {
+        height: 55vh;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .Meeting-info {
+        height: 50vh;
+        width: 100%;
+        margin-top: -80px;
+        padding: 20px;
+        border-radius: 20px;
+        background: #fff;
+    }
+
+    .video-container,
+    .overlay {
+        height: 100%;
+    }
+
+    video {
+        border-radius: 0;
+    }
+
+    .overlay {
+        font-size: 1rem;
+        border-radius: 0;
+    }
+
+    .overlay p {
+        margin-bottom: 100px;
+    }
+
+    .controls {
+        bottom: 100px;
+    }
+
+    .fields,
+    .share-link {
+        width: 100%;
+    }
+
+    .share-link {
+        margin-bottom: 10px;
+    }
+
+    .share {
+        font-size: 0.8rem;
+    }
+
+    .feed-title {
+        display: none;
+    }
+
+    .join-title {
+        margin-left: 0;
+        align-self: center;
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+
+    .share-link-input {
+        height: auto;
+    }
+
+    .logo-cont {
+        font-size: 0.7em;
+    }
+
+    .logo {
+        margin-right: 10px;
+        height: 40px;
+        width: 50px;
+    }
+
+    .buttons {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .join-button,
+    .present-button {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    .feed-title,
+    .join-title,
+    .share,
+    .copy-icon,
+    .icon-devices {
+        color: #BCB88A;
+    }
+
+    .share-link-input {
+        background-color: var(--secondary-green-color);
+    }
+
+    .meeting-input,
+    .join-select,
+    .linkp {
+        color: #fff;
+    }
+
+    .Meeting-info,
+    .join-options {
+        background: var(--color-background);
+    }
+
+    .join-select {
+        color: #ddd;
+        background: var(--main-green-color);
+        outline: none;
+        border: none;
+    }
+
+    .join-select option:hover {
+        background: #fff;
+    }
+
+    .join-select:focus {
+        border: none;
+    }
+
+    .present-button {
+        background-color: #BCB88A;
+    }
+
+    .device-dropdown {
+        color: #ddd;
+    }
+}

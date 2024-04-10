@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "unplugin-vue-router/client"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

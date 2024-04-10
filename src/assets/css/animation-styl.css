@@ -1,0 +1,155 @@
+.animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(228, 245, 225, 0.4);
+}
+
+.slash {
+    width: 5px;
+    height: 180px;
+    background-color: var(--main-green);
+    clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+    transition: clip-path 1s cubic-bezier(0.42, 0, 0.58, 1), left 1s cubic-bezier(0.42, 0, 0.58, 1);
+    position: absolute;
+    left: 50%;
+}
+
+.slash1 {
+    width: 5px;
+    height: 180px;
+    opacity: 0;
+    background-color: var(--main-green);
+    position: absolute;
+    left: 50%;
+}
+
+.left-hand,
+.right-hand {
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    position: relative;
+    transition: opacity 0.5s ease-in-out, transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.left-hand {
+    transform: translateX(-100%);
+}
+
+.left-hand img {
+    height: 180px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+.right-hand {
+    transform: translateX(100%);
+}
+
+.right-hand img {
+    height: 180px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+.animation-logo-container {
+    color: var(--main-green);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+}
+
+.animation-logo-container img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0;
+}
+
+.loaderh1{
+    margin-top: 3px;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box {
+    width: 140px;
+    height: 140px;
+    left: -20%;
+    top: -5%;
+    border-radius: 100%;
+    position: absolute;
+}
+
+#loader-1:before,
+#loader-1:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 10px solid transparent;
+}
+
+#loader-1:before {
+    border-top-color: #ccc;
+    animation: spin 1s infinite;
+}
+
+#loader-1:after {
+    animation: spin 1s infinite alternate;
+    border-bottom-color: var(--main-green);
+}
+
+@-moz-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .right-hand {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

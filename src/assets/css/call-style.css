@@ -1,0 +1,265 @@
+.Pages {
+    position: absolute;
+    background-color: rgba(151, 175, 163, 0.3);
+    height: 100vh;
+    width: 80%;
+    right: 0px;
+    border-radius: 60px 0px 0px 60px;
+    overflow: hidden;
+}
+
+.calls-container {
+    flex: 0 0 calc(100% - 180px);
+    padding: 0 41.5px;
+    padding-top: 34px;
+    padding-bottom: 50px;
+}
+
+.callsConts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header {
+    height: 70px;
+    background: url(../img/body-bg.png) center/cover no-repeat, radial-gradient(circle at -1% 57.5%, rgb(60, 84, 72) 0%, rgb(60, 84, 72) 90%);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.page-content {
+    display: flex;
+    margin-top: 28px;
+}
+
+.callsCont {
+    width: 100%;
+    max-width: 480px;
+    height: 400px;
+    background: rgba(16, 18, 27, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+}
+
+.callsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 21px;
+}
+
+.callInfo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.callTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.callDesc {
+    font-size: 13px;
+    color: #FAF9F6;
+}
+
+.contIcon {
+    margin-top: -4rem;
+    height: 140px;
+    width: 145px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    border: 4px solid #BCB88A;
+    overflow: hidden;
+}
+
+.contIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.button {
+    font-family: inherit;
+    width: 145px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 18px;
+    color: #808080;
+    background: rgba(16, 18, 27, 0.4);
+    border: none;
+    transition: background 0.50s ease-in-out, color 0.50s ease-in-out;
+}
+
+.button:not(:hover) .right-arrow {
+    visibility: visible;
+}
+
+.button:hover {
+    background: linear-gradient(to right, rgba(0, 176, 155), rgba(150, 201, 61));
+}
+
+.arrow {
+    position: absolute;
+    top: 25%;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #34d399;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    visibility: hidden;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.button:hover .left-arrow {
+    visibility: visible;
+    stroke: #f4f4f4;
+}
+
+.label {
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease-out;
+}
+
+.button:hover .label {
+    transform: translateX(25px);
+    color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.darksoul-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.darksoul-grid {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: auto auto;
+    animation: rotate 2s linear 0s infinite;
+}
+
+.item1,
+.item2,
+.item3,
+.item4 {
+    width: 15px;
+    height: 15px;
+    border-radius: 0%;
+    background-color: rgb(255, 255, 255);
+}
+
+.item1 {
+    background-color: var(--main-green-color);
+}
+
+.item4 {
+    background-color: #BCB88A;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+        transform: scale(0.6);
+    }
+
+    50% {
+        rotate: 100deg;
+        transform: scale(0.4);
+    }
+
+    100% {
+        rotate: 360deg;
+        transform: scale(0.6);
+    }
+}
+
+.darksoul-loader-h {
+    font-weight: bold;
+    margin-left: 5px;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+
+    .Pages {
+        width: 70%;
+        overflow: auto;
+    }
+
+    .callsConts {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .Pages {
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        border-radius: 0;
+    }
+
+    .Side-bar {
+        display: none;
+    }
+
+    .callsConts {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .callsCont {
+        height: auto;
+        max-width: 100%;
+    }
+}
