@@ -394,22 +394,14 @@ main {
     margin-bottom: 5px;
 }
 
+.word-window-footer {
+    margin-top: 5px;
+}
+
 .word-window-title {
     font-size: 17px;
     color: #333333;
     margin: 0;
-}
-
-.close-button {
-    background-color: transparent;
-    border: none;
-    color: #777777;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    color: #333333;
 }
 
 .word-window.active {
@@ -420,15 +412,39 @@ main {
 .word-list {
     display: flex;
     flex-wrap: wrap;
+    padding: 10px 5px;
 }
 
 .word {
+    position: relative;
     margin: 5px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #333333;
     cursor: pointer;
+}
+
+.close-button {
+    position: absolute;
+    top: -7px;
+    right: 1px;
+    background-color: transparent;
+    border: none;
+    color: #777777;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.getWordsButton {
+    float: right;
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #3c5448;
+    color: #BCB88A;
+    font-family: inherit;
+    border: none;
+    border-radius: 10px;
 }
 
 .overlay {

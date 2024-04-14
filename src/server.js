@@ -57,10 +57,10 @@ io.on("connection", (socket) => {
       console.log('Received reaction from client:', reaction, userName);
       socket.to(roomId).emit("receiveReaction", reaction, userName);
     });
-    socket.on("gesture-detected", (gesture, userName) => {
-      console.log('Received gesture from client:', gesture, userName);
-      socket.to(roomId).emit("receive-gesture", gesture, userName);
-    });
+    socket.on("gesture-detected", (gesture, containerId) => {
+      console.log('Received gesture from client:', gesture, containerId);
+      io.to(roomId).emit("receive-gesture", gesture, containerId);
+    });    
     socket.on("disconnect", () => {
       socket.to(roomId).emit('user-disconnected', userId);
     });

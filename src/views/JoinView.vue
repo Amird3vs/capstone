@@ -69,7 +69,7 @@ export default {
             }
         },
         redirectToMeeting() {
-            const meetingLink = document.querySelector('.linkp2').textContent;
+            const meetingLink = document.querySelector('.linkp3').textContent;
             const displayName = document.querySelector('.meeting-input').value;
             const selectedJoinAs = this.selectedJoinAs;
             const updatedMeetingLink = `${meetingLink}?displayName=${encodeURIComponent(displayName)}&joinAs=${encodeURIComponent(selectedJoinAs)}`;
@@ -235,7 +235,8 @@ export default {
                         <div class="input-container">
                             <div class="share-link-input" id="share-link-input">
                                 <p class="linkp">Copy link</p>
-                                <p class="linkp2">http://localhost:3000/{{ meetingCode }}</p>
+                                <p class="linkp2">http://salinsenyasv1.000webhostapp.com/Join/{{ meetingCode }}</p>
+                                <p class="linkp3">https://webrtc-9u7q.onrender.com/{{ meetingCode }}</p>
                             </div>
                             <span id="copy-icon" class="material-symbols-outlined copy-icon"
                                 @click="copyLink">content_copy</span>
@@ -245,9 +246,9 @@ export default {
                     <div class="buttons">
                         <button class="join-button" :class="{ 'disabled': !selectedJoinAs }"
                             @click="handleJoinClick">Join now</button>
-                        <button class="present-button"> <span class="material-symbols-outlined present-icon">
+                        <!-- <button class="present-button"> <span class="material-symbols-outlined present-icon">
                                 screen_share
-                            </span>Present</button>
+                            </span>Present</button> -->
                     </div>
                     <p class="copyright">&copy; 2024 SalinSenyas. All rights reserved.</p>
                 </div>

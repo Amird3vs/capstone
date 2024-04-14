@@ -233,8 +233,11 @@ export default {
             this.showSuggestions = false;
         },
         selectWord(word) {
-            this.userInput += word + ' ';
+            this.userInput = word + ' ';
             this.showWordWindow = false;
+        },
+        removeWord(index) {
+            this.splitWords.splice(index, 1);
         },
         splitPhrase(suggestion) {
             const words = suggestion.split(" ");
@@ -243,6 +246,12 @@ export default {
             this.$nextTick(() => {
                 this.toggleWordWindow(true);
             });
+        },
+        insertRemainingWords() {
+            this.userInput = this.splitWords.join(' ');
+            this.splitWords = [];
+            this.showWordWindow = false;
+            this.showSuggestions = false;
         },
         toggleWordWindow(show) {
             const wordWindow = document.querySelector('.word-window');
@@ -360,11 +369,9 @@ export default {
                         <p class="copyright">&copy; 2024 SalinSenyas. All rights reserved.</p>
                     </div>
                     <div class="autocomplete-textarea">
-                        <textarea id="userInput" class="typing-area" v-model="userInput"
-                            @input="handleInput"></textarea>
+                        <textarea id="userInput" class="typing-area" v-model="userInput" @input="handleInput"></textarea>
                         <ul v-if="showSuggestions && suggestions.length" class="suggestions">
-                            <li v-for="suggestion in suggestions" :key="suggestion"
-                                @click="selectSuggestion(suggestion)">
+                            <li v-for="suggestion in suggestions" :key="suggestion" @click="selectSuggestion(suggestion)">
                                 <div class="suggestion-container">
                                     <span v-html="highlightMatch(suggestion)"></span>
                                     <button class="edit-btn" @click.stop="splitPhrase(suggestion)">
@@ -385,14 +392,16 @@ export default {
                 <div class="word-window-header">
                     <h3 class="word-window-title">Split Words?</h3>
                     <span class="material-symbols-outlined" style="cursor: pointer; color: red;"
-                        @click.stop="closeWordWindow">
-                        close
-                    </span>
+                        @click.stop="closeWordWindow">close</span>
                 </div>
                 <div class="word-list">
-                    <div v-for="(word, index) in splitWords" :key="index" class="word" @click="selectWord(word)">
-                        {{ word }}
+                    <div v-for="(word, index) in splitWords" :key="index" class="word">
+                        <span class="word-text" @click="selectWord(word)">{{ word }}</span>
+                        <span class="close-button" @click="removeWord(index)">&times;</span>
                     </div>
+                </div>
+                <div class="word-window-footer">
+                    <button class="getWordsButton" @click="insertRemainingWords">Done</button>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ export default {
         createCall() {
             this.loading = true;
             setTimeout(() => {
-                axios.get('http://localhost:3000')
+                axios.get('https://webrtc-9u7q.onrender.com')
                     .then(response => {
                         const meetingCode = response.data;
                         this.loading = false;

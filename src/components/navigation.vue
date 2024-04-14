@@ -39,7 +39,7 @@ export default {
             </div>
         </router-link>
 
-        <router-link to="/Signin" target="_blank" class="nav__link" exact-active-class="active">
+        <router-link to="/Signin" class="nav__link" exact-active-class="active">
             <i class="material-symbols-outlined nav__icon">video_chat</i>
             <span class="nav__text"></span>
             <div class="tooltip">
